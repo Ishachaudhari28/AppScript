@@ -1,0 +1,9 @@
+function myFunction() {
+  let mailTo = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1").getDataRange().getValues();
+
+  for(let a = 1; a<mailTo.length; a++)
+  {
+      console.log(mailTo[a][0])
+       MailApp.sendEmail(mailTo[a][0], "About todays session ", "Todays session was very intreseting we learn a new technology such as google Apps Script  ");
+  }
+}
