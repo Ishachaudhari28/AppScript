@@ -1,0 +1,13 @@
+function myFunction() {
+  let mailTo = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1').getRange('A3').getValue();
+  MailApp.sendEmail(mailTo, "Test", "Tu pahele bhi ");
+}
+
+
+function myFunction() {
+  let mailTo = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1').getDataRange().getValues();
+  for(let i=1; i< mailTo.length; i++)
+  MailApp.sendEmail(mailTo[i][0], "Test", "After 2 day Start learning Appscript with Nishikant sir");
+}
+
+
